@@ -452,3 +452,10 @@ tools/ImageCropper/**/*.png
 
 config
 debug
+# MaaFwApp 打包生成物（流水线生成，不进 git）
+Android/pi-root/
+Android/agent-dist/
+Android/MaaFwApp/local.properties
+Android/MaaFwApp/.maafw/
+Android/MaaFwApp/.maa-cache/
+Android/MaaFwApp/.maa-cache

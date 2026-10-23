@@ -1,0 +1,36 @@
+# MaaFwApp 打包配方。相对路径相对本文件。
+# 先跑：python tools/prepare_android_pi.py
+# agent 运行时：见 build_agent_bundle.py（Android/MaaFwApp/scripts/ 下）
+
+assets: pi-root
+
+include:
+  - interface.json
+  - resource/**
+  - agent/**
+  - tasks/**
+  - CONTACT
+  - LICENSE
+
+# 识别用的图和模型都在 resource/ 里，别挖
+exclude: []
+
+# 出运行时（内核由流水线 setup_maa_framework.py 下到 Android/MaaFwApp/.maafw/，不用 NDK）：
+#   python Android/MaaFwApp/scripts/build_agent_bundle.py --out Android/agent-dist \
+#     --requirements requirements.txt
+agent:
+  sourceDir: agent-dist
+  abi: [arm64-v8a, x86_64]
+  runtimes:
+    - location: bundle
+      executable: bin/python3
+      args: [-u, agent/main.py]
+      env:
+        PYTHONHOME: "{bundle}/prefix"
+        PYTHONPATH: "{bundle}/site-packages/pure.zip:{bundle}/site-packages"
+        LD_LIBRARY_PATH: "{bundle}/prefix/lib:{nativeLibs}"
+        MAAFW_BINARY_PATH: "{nativeLibs}"
+
+app:
+  id: maatest
+  label: MaaTest

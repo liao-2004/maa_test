@@ -1,0 +1,4 @@
+# maa_test 的 agent 运行时依赖（用于 build_agent_bundle.py 打包进手机）
+# maa 包：maaagentbinary 提供原生库，maafw 提供 Python 绑定
+maaagentbinary==1.0.1
+maafw==5.13.0
