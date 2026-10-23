@@ -1,0 +1,310 @@
+{
+    "紫色选项": {
+        "recognition": "TemplateMatch",
+        "template": "紫色选项.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 4,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "我拒绝": {
+        "recognition": "OCR",
+        "expected": "我拒绝",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "秘密实验室": {
+        "recognition": "OCR",
+        "expected": "秘密实验室",
+        "action": "DoNothing",
+        "next": [
+            "队列上限"
+        ]
+    },
+    "队列上限": {
+        "recognition": "OCR",
+        "expected": "队列上限",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "废墟": {
+        "recognition": "OCR",
+        "expected": "废墟",
+        "action": "DoNothing",
+        "next": [
+            "搜刮"
+        ]
+    },
+    "搜刮": {
+        "recognition": "OCR",
+        "expected": "搜刮",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "叹息者": {
+        "recognition": "OCR",
+        "expected": "叹息者",
+        "action": "DoNothing",
+        "next": [
+            "你是谁"
+        ]
+    },
+    "你是谁": {
+        "recognition": "OCR",
+        "expected": "你是谁",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "触发战斗": {
+        "recognition": "OCR",
+        "expected": "触发战斗",
+        "action": "Click",
+        "next": [
+            "各种事件"
+        ]
+    },
+    "真是不堪入耳的声音": {
+        "recognition": "OCR",
+        "expected": "真是不堪入耳的声音",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 4000,
+        "next": [
+            "触发战斗",
+            "各种事件"
+        ]
+    },
+    "接触火元素符文": {
+        "recognition": "OCR",
+        "expected": "接触火元素符文",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "困兽": {
+        "recognition": "OCR",
+        "expected": "困兽",
+        "action": "DoNothing",
+        "next": [
+            "询问他详情"
+        ]
+    },
+    "询问他详情": {
+        "recognition": "OCR",
+        "expected": "询问他详情",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "大力出奇迹": {
+        "recognition": "OCR",
+        "expected": "大力出奇迹",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "大肆搜刮": {
+        "recognition": "OCR",
+        "expected": "大肆搜刮",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "尝试修理它": {
+        "recognition": "OCR",
+        "expected": "尝试修理它",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "翻看四周": {
+        "recognition": "OCR",
+        "expected": "翻看四周",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "卡牌右上角"
+        ]
+    },
+    "卡牌右上角": {
+        "recognition": "TemplateMatch",
+        "template": "卡牌右上角.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "确定",
+            "刻印"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "卡牌右上角紫无框": {
+        "recognition": "TemplateMatch",
+        "template": "卡牌右上角紫无框.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "确定",
+            "触发战斗",
+            "刻印"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "确定": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "刻印": {
+        "recognition": "OCR",
+        "expected": "刻印",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "刻印返回",
+            "各种事件"
+        ]
+    },
+    "拂去它上面的落叶": {
+        "recognition": "OCR",
+        "expected": "拂去它上面的落叶",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "不要吃来路不明的东西": {
+        "recognition": "OCR",
+        "expected": "不要吃来路不明的东西",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "无畏斧卡牌"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "无畏斧卡牌": {
+        "recognition": "TemplateMatch",
+        "template": "无畏斧卡牌.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "刻印",
+            "确定"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "头槌卡": {
+        "recognition": "TemplateMatch",
+        "template": "头槌卡.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "刻印",
+            "确定"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "行个方便": {
+        "recognition": "OCR",
+        "expected": "行个方便",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "达成交易": {
+        "recognition": "OCR",
+        "expected": "达成交易",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "特殊卡牌加入卡组": {
+        "recognition": "OCR",
+        "expected": "特殊卡牌加入卡组",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    }
+}

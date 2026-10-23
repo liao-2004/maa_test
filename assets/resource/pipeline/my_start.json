@@ -1,0 +1,41 @@
+{
+    "启动游戏": {
+        "recognition": "TemplateMatch",
+        "template": "hzsj.png",
+        "action": "Click",
+        "rate_limit": 3000,
+        "timeout": 100000,
+        "next": [
+            "返回公告",
+            "进入游戏"
+        ]
+    },
+    "返回公告": {
+        "recognition": "TemplateMatch",
+        "template": "返回.png",
+        "action": "Click",
+        "pre_delay": 2000,
+        "repeat": 4,
+        "repeat_delay": 1000,
+        "next": [
+            "返回公告",
+            "进入游戏"
+        ],
+        "on_error": [
+            "启动游戏",
+            "各种事件"
+        ]
+    },
+    "进入游戏": {
+        "recognition": "TemplateMatch",
+        "template": "进入游戏.png",
+        "action": "Click",
+        "repeat": 4,
+        "repeat_delay": 1000,
+        "pre_delay": 1000,
+        "next": [
+            "启动祭坛",
+            "各种事件"
+        ]
+    },
+}

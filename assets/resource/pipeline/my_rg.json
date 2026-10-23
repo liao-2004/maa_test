@@ -1,0 +1,499 @@
+{
+    "启动祭坛": {
+        "recognition": "TemplateMatch",
+        "template": "启动祭坛.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "rate_limit": 3000,
+        "next": [
+            "坠入深境"
+        ],
+        "on_error": [
+            "启动祭坛",
+            "各种事件"
+        ]
+    },
+    "滑动难度": {
+        "action": "Swipe",
+        "begin": [
+            1000,
+            500,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            500,
+            10,
+            10
+        ],
+        "repeat": 3,
+        "repeat_delay": 1000,
+        "next": [
+            "坠入深境"
+        ]
+    },
+    "坠入深境": {
+        "recognition": "OCR",
+        "expected": "坠入深境",
+        "pre_delay": 1000,
+        "action": "Click",
+        "repeat": 2,
+        "rate_limit": 3000,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "各种事件": {
+        "action": "DoNothing",
+        "timeout": 8000,
+        "next": [
+            "一键出牌",
+            "坠入",
+            "确认选择",
+            "直接离开",
+            "激活护符",
+            "被迫加入",
+            "移除卡牌",
+            "离开地点",
+            "前往",
+            "询问他详情",
+            "达成交易",
+            "启动游戏",
+            "下一步",
+        ],
+        "on_error": [
+            "稀有事件"
+        ]
+    },
+    "稀有事件": {
+        "timeout": 8000,
+        "next": [
+            "坠入",
+            "确认选择",
+            "激活护符",
+            "刻印返回",
+            "接受并离开",
+            "继续",
+            "下一步",
+            "点击任意空白处关闭",
+            "夜巡人的确认",
+            "挣扎",
+            "放弃",
+            "带走",
+            "同化",
+            "存在",
+            "启动祭坛",
+            "坠入深境",
+            "局内叉叉",
+            "不留下遗物",
+            "触发战斗",
+            "真是不堪入耳的声音",
+            "大肆搜刮",
+            "结束此次探索",
+            "移除卡牌界面返回",
+            "卡牌右上角",
+            "卡牌右上角紫无框",
+            "无畏斧卡牌",
+            "接触火元素符文",
+            "特殊卡牌加入卡组",
+            "a右",
+            "a左",
+            "角色界面返回",
+            "点击一下选项位置",
+        ],
+        "on_error": [
+            "地图页面"
+        ]
+    },
+    "离开地点": {
+        "recognition": "TemplateMatch",
+        "template": "leave/",
+        "action": "Click",
+        "rate_limit": 3001,
+        "pre_delay": 1000,
+        "next": [
+            "直接离开",
+            "地图页面",
+            "各种事件",
+        ]
+    },
+    "直接离开": {
+        "recognition": "OCR",
+        "expected": "直接离开",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "地图页面"
+        ]
+    },
+    "确认选择": {
+        "recognition": "OCR",
+        "expected": "确认选择",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "点击一下选项位置": {
+        "action": "Click",
+        "repeat_delay": 1000,
+        "repeat": 2,
+        "target": [
+            267,
+            538
+        ],
+        "next": [
+            "角色界面返回",
+            "护符界面叉叉",
+            "点击一下选项位2"
+        ]
+    },
+    "点击一下选项位2": {
+        "action": "Click",
+        "repeat_delay": 1000,
+        "repeat": 2,
+        "target": [
+            214,
+            452
+        ],
+        "next": [
+            "护符界面叉叉",
+            "角色界面返回",
+            "各种事件"
+        ]
+    },
+    "角色界面返回": {
+        "recognition": "TemplateMatch",
+        "template": "角色界面返回.png",
+        "action": "Click",
+        "next": [
+            "启动祭坛",
+            "大肆搜刮"
+        ],
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "地图页面": {
+        "action": "DoNothing",
+        "next": [
+            "激活护符",
+            "直接离开",
+            "离开地点",
+            "a右",
+            "a左",
+            "下一步",
+        ],
+        "rate_limit": 300,
+        "timeout": 8000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "坠入": {
+        "recognition": "TemplateMatch",
+        "template": "坠入.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat_delay": 1500,
+        "repeat": 2,
+        "next": [
+            "头槌卡",
+            "卡牌右上角",
+            "卡牌右上角紫无框",
+            "无畏斧卡牌",
+            "一键出牌",
+            "确定"
+        ],
+        "timeout": 3000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "点击空白": {
+        "recognition": "OCR",
+        "expected": "点击空白",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "前往": {
+        "recognition": "OCR",
+        "expected": "前往",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "一键出牌": {
+        "recognition": "TemplateMatch",
+        "template": "一键出牌小.png",
+        "action": "Click",
+        "repeat": 2,
+        "roi": [
+            1156,
+            221,
+            126,
+            88
+        ],
+        "next": [
+            "挣扎",
+            "夜巡人的确认",
+            "离开地点",
+            "黑市行医",
+            "同化",
+            "确定",
+            "继续",
+            "存在",
+            "放弃",
+            "一键出牌",
+        ],
+        "rate_limit": 3000,
+        "timeout": 30000,
+        "on_error": [
+            "局内设置按钮",
+            "局内卡组按钮",
+            "各种事件",
+        ]
+    },
+    "黑市行医": {
+        "recognition": "OCR",
+        "expected": "黑市行医",
+        "action": "DoNothing",
+        "pre_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "局内设置按钮",
+            "局内卡组按钮",
+            "各种事件",
+        ]
+    },
+    "同化": {
+        "recognition": "OCR",
+        "expected": "同化",
+        "action": "DoNothing",
+        "pre_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "局内设置按钮",
+            "局内卡组按钮",
+            "各种事件"
+        ]
+    },
+    "夜巡人的确认": {
+        "recognition": "TemplateMatch",
+        "template": "夜巡人的确认.png",
+        "pre_delay": 1500,
+        "repeat": 2,
+        "repeat_delay": 1000,
+        "action": "Click",
+        "next": [
+            "夜巡人的确认",
+            "局内设置按钮",
+            "局内卡组按钮"
+        ],
+        "timeout": 6001,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "战斗内确定": {
+        "recognition": "TemplateMatch",
+        "template": "战斗内确定.png",
+        "action": "Click",
+        "next": [
+            "战斗内确定",
+            "局内设置按钮",
+            "局内卡组按钮"
+        ],
+        "timeout": 6000,
+        "on_error": [
+            "地图页面"
+        ]
+    },
+    "死亡截图": {
+        "recognition": "TemplateMatch",
+        "template": "死亡截图.png",
+        "action": "Click",
+        "next": [
+            "点击任意空白处关闭",
+            "结束此次探索",
+            "各种事件"
+        ],
+        "timeout": 3000,
+        "on_error": [
+            "地图页面"
+        ]
+    },
+    "挣扎": {
+        "recognition": "OCR",
+        "expected": "挣扎",
+        "action": "Click",
+        "pre_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "放弃": {
+        "recognition": "OCR",
+        "expected": "放弃",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "存在",
+            "不留下遗物"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "存在": {
+        "recognition": "OCR",
+        "expected": "存在",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "坠入",
+            "存在",
+            "不留下遗物"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "带走": {
+        "recognition": "OCR",
+        "expected": "带走",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "repeat_delay": 1500,
+        "next": [
+            "各种事件"
+        ]
+    },
+    "不留下遗物": {
+        "recognition": "OCR",
+        "expected": "不留下遗物",
+        "action": "Click",
+        "pre_delay": 1000,
+        "timeout": 5000,
+        "next": [
+            "存在",
+            "不留下遗物"
+        ],
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "接受并离开": {
+        "recognition": "OCR",
+        "expected": "接受并离开",
+        "action": "Click",
+        "next": [
+            "各种事件"
+        ]
+    },
+    "全黑": {
+        "recognition": "TemplateMatch",
+        "template": "全黑.png",
+        "action": "Click",
+        "timeout": 5000,
+        "next": [
+            "点击任意空白处关闭",
+            "获得物品",
+            "死亡截图",
+            "结束此次探索"
+        ],
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "继续": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": [
+            "点击任意空白处关闭",
+            "获得物品",
+            "死亡截图",
+            "全黑",
+            "结束此次探索"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "点击任意空白处关闭": {
+        "recognition": "OCR",
+        "expected": "点击任意空白处关闭",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "next": [
+            "点击任意空白处关闭",
+            "获得物品",
+            "死亡截图",
+            "全黑",
+            "结束此次探索"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "获得物品": {
+        "recognition": "OCR",
+        "expected": "获得物品",
+        "action": "Click",
+        "pre_delay": 1000,
+        "repeat": 2,
+        "timeout": 5000,
+        "next": [
+            "点击任意空白处关闭",
+            "获得物品",
+            "结束此次探索",
+            "全黑",
+            "死亡截图",
+        ],
+        "on_error": [
+            "各种事件"
+        ]
+    },
+    "结束此次探索": {
+        "recognition": "OCR",
+        "expected": "结束此次探索",
+        "action": "Click",
+        "pre_delay": 1000,
+        "timeout": 100000,
+        "rate_limit": 5000,
+        "next": [
+            "结束此次探索",
+            "点击任意空白处关闭",
+            "获得物品",
+            "死亡截图",
+            "全黑",
+            "启动祭坛"
+        ]
+    },
+    "评价的叉叉": {
+        "recognition": "TemplateMatch",
+        "template": "评价的叉叉.png",
+        "action": "Click",
+        "next": [
+            "启动祭坛"
+        ]
+    },
+}

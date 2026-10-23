@@ -15,6 +15,10 @@ REPO = Path(__file__).resolve().parents[1]
 DEST = REPO / "Android" / "pi-root"
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".git")
 
+# 让 CI 先下载 OCR 模型到 assets/resource/model/ocr，再随资源一起打进包
+sys.path.insert(0, str(REPO / "tools" / "ci"))
+from configure import configure_ocr_model  # noqa: E402
+
 
 def copy_tree(src: Path, dest: Path) -> None:
     if dest.exists():
@@ -28,6 +32,8 @@ def main() -> int:
     if not (assets / "interface.json").is_file():
         print(f"missing {assets / 'interface.json'}", file=sys.stderr)
         return 1
+
+    configure_ocr_model()
 
     if DEST.exists():
         shutil.rmtree(DEST)
